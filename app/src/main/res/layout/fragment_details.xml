@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/recyclerview_padding"
+    tools:context=".ui.fragment.DetailsFragment">
+
+    <FrameLayout
+        android:id="@+id/detailsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:minHeight="100dp">
+
+        <ImageView
+            android:id="@+id/details_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart" />
+
+        <TextView
+            android:id="@+id/details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/details_title_size" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailsFragment"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/details_overview"
+            style="@style/DetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/details_revenue"
+            style="@style/DetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/revenue" />
+
+        <TextView
+            android:id="@+id/details_budget"
+            style="@style/DetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/budget" />
+
+        <TextView
+            android:id="@+id/details_release"
+            style="@style/DetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/release" />
+
+        <TextView
+            android:id="@+id/details_runtime"
+            style="@style/DetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/runtime" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/progressbar_size"
+        android:layout_height="@dimen/progressbar_size"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
